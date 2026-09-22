@@ -1,4 +1,4 @@
-# PathTwin: Decisions and Limitations
+# PathTwin: Methodology
 
 This document summarizes the principal methodological decisions, data-verification findings, and limitations underlying the PathTwin pipeline. It allows an independent reviewer to evaluate the reasoning behind key choices without reconstructing them from version-control history. Quantitative results are reported in full in `README.md` and in the corresponding files under `results/`; this document provides the reasoning and context behind those results, organized by pipeline stage.
 
