@@ -1,0 +1,5 @@
+tools:
+  foldx:
+    binary: "/home/kell/tools/foldx/foldx"
+    version: "5.1"
+    license_expiry: "2026-12-31"

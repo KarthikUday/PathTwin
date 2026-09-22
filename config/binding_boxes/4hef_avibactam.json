@@ -1,0 +1,13 @@
+{
+  "receptor": "4HEF",
+  "ligand": "avibactam",
+  "center_x": -5.784,
+  "center_y": -9.235,
+  "center_z": 18.868,
+  "size_x": 20,
+  "size_y": 20,
+  "size_z": 20,
+  "exhaustiveness": 32,
+  "random_seed": 42,
+  "note": "Centered on Ser90's OG (catalytic nucleophile, class C S-X-X-K nucleophile elbow: Ser90-Val91-Ser92-Lys93). Confirmed via both a SITE record (AC3, 15 atoms including Ser90, Tyr177/Asn179, Lys342/Thr343/Gly344 -- the three canonical class C active-site motifs) and a genuine covalent LINK record (Ser90 OG to NXL CAN, 1.36 A). This receptor was substituted for the originally-requested 4GZB, which turned out to be a fully apo (ligand-free) native AmpC structure despite the task's premise that it was avibactam-bound -- see README 'PDC-1/AmpC vs avibactam' for the full account. The deposited ligand (NXL) is confirmed via RCSB's chemical component dictionary to be the ring-opened, covalently-engaged form of avibactam (monocyclic piperidine-carboxamide, C7H13N3O6S) rather than the intact bicyclic diazabicyclooctane drug (C7H11N3O6S, PubChem CID 9835049) -- mechanistically expected, since avibactam inhibits by covalent ring-opening onto the catalytic serine. A fresh intact avibactam was independently fetched from PubChem and docked non-covalently, as Vina cannot model covalent bond formation."
+}

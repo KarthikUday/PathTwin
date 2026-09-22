@@ -1,0 +1,13 @@
+{
+  "receptor": "4JF4",
+  "ligand": "meropenem",
+  "center_x": 11.572,
+  "center_y": -6.408,
+  "center_z": 9.075,
+  "size_x": 20,
+  "size_y": 20,
+  "size_z": 20,
+  "exhaustiveness": 32,
+  "random_seed": 42,
+  "note": "Centered on Ser79's OG (catalytic nucleophile). Lys82 is deposited as a STANDARD (non-carboxylated) lysine in this structure -- no KCX present -- so the receptor was used as-deposited rather than artificially adding the carbamylation; see README 'OXA-23 vs meropenem' for the full reasoning. The real 4JF4 co-crystal ligand (component MER) is confirmed to be the ring-opened hydrolysis PRODUCT of meropenem, not the intact drug -- a fresh intact meropenem was independently fetched from PubChem and docked."
+}

@@ -1,0 +1,13 @@
+{
+  "receptor": "1SHV",
+  "ligand": "tazobactam",
+  "center_x": 5.712,
+  "center_y": 37.173,
+  "center_z": -7.452,
+  "size_x": 20,
+  "size_y": 20,
+  "size_z": 20,
+  "exhaustiveness": 32,
+  "random_seed": 42,
+  "note": "CORRECTED box, superseding 1shv_tazobactam.json's original Ser70-OG-centered box. Centered on the real crystallographic tazobactam position: fetched 1VM1 (SHV-1's own real tazobactam co-crystal structure -- 1SHV itself is apo, so no ligand position was available from the receptor's own deposition), superimposed onto 1SHV via Bio.PDB Superimposer on 265 matched chain-A CA atoms (0.551 A RMSD -- a tight, high-confidence alignment), then applied the identical transform to TAZ's real coordinates and took their centroid. The original box (Ser70 OG-centered, per the SHV-1-established convention every other Stage 2 target also used) turned out to be ~13 A from this corrected center once an actual crystal-ligand-position check was finally done for this target -- see DECISIONS_AND_LIMITATIONS.md 'SHV-1 box correction' for the full account of how this was found and fixed."
+}

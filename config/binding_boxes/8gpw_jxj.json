@@ -1,0 +1,13 @@
+{
+  "receptor": "8GPW",
+  "ligand": "JXJ",
+  "center_x": 10.312,
+  "center_y": 24.377,
+  "center_z": -15.110,
+  "size_x": 20,
+  "size_y": 20,
+  "size_z": 20,
+  "exhaustiveness": 32,
+  "random_seed": 42,
+  "note": "Centered on Ser307 OG (SXXK nucleophile), LINK-record-confirmed covalent attachment point in the 8GPW co-crystal. Validated against 8GPW's own co-crystal geometry (chain A)."
+}

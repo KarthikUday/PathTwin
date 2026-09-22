@@ -1,0 +1,13 @@
+{
+  "receptor": "5V3D",
+  "ligand": "fosfomycin (FCN)",
+  "center_x": 16.736,
+  "center_y": -12.284,
+  "center_z": -10.149,
+  "size_x": 20,
+  "size_y": 20,
+  "size_z": 20,
+  "exhaustiveness": 32,
+  "random_seed": 42,
+  "note": "Centered on the Mn2+ ion (Mn A201), the catalytic metal directly LINK-coordinated to the crystal fosfomycin's O/O1P atoms in 5V3D. Kept in the receptor (see README for the keep-vs-exclude rationale); K+ (K A202/B202, structural, not ligand-coordinating per LINK records) excluded -- meeko cannot build a template for the K element, and it doesn't touch the ligand anyway."
+}

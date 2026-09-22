@@ -1,0 +1,13 @@
+{
+  "receptor": "5M18",
+  "ligand": "cefepime",
+  "center_x": 19.42,
+  "center_y": -18.16,
+  "center_z": -52.58,
+  "size_x": 20,
+  "size_y": 20,
+  "size_z": 20,
+  "exhaustiveness": 32,
+  "random_seed": 42,
+  "note": "Centered on the crystallographic MUR (beta-muramic acid) A703 ligand centroid -- PBP2a's distal allosteric site, ~45 A from the transpeptidase catalytic Ser403 (chain A OG). NOT the classical active site. See README 'PBP2a: a two-site allosteric target' for why the deposited 5M18 coordinates show MUR rather than cefepime itself, despite the entry's own title."
+}

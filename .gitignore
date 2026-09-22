@@ -1,0 +1,64 @@
+# --- Data (large / regenerable) ---
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# data/raw/genomes_batch/: intentionally-empty destination dir for future
+# downloaded training genomes -- keep it (and its .gitkeep) tracked even
+# though everything else under data/raw/ is regenerable/ignored.
+!data/raw/genomes_batch/
+!data/raw/genomes_batch/.gitkeep
+
+# Placeholder labels fixture (dummy values -- see script docstring) so
+# train_classifier.py is testable before real phenotype data exists.
+!data/processed/labels_placeholder.csv
+
+# --- Results ---
+# Full raw output tree is large/regenerable and stays ignored; the
+# summary metrics and SHAP plots referenced from the root README are
+# tracked so the repo is useful without re-running the pipeline.
+results/*
+!results/.gitkeep
+!results/metrics.md
+!results/ml_classifier/
+results/ml_classifier/*
+!results/ml_classifier/*.png
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Virtual envs / conda ---
+.venv/
+venv/
+env/
+*.env
+
+# --- Model checkpoints ---
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.h5
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- RGI / CARD runtime artifacts ---
+localDB/
+*.json.temp
+*.txt.temp

@@ -1,0 +1,13 @@
+{
+  "receptor": "1SHV",
+  "ligand": "tazobactam",
+  "center_x": 7.18,
+  "center_y": 31.987,
+  "center_z": 5.456,
+  "size_x": 20,
+  "size_y": 20,
+  "size_z": 20,
+  "exhaustiveness": 32,
+  "random_seed": 42,
+  "note": "Centered on Ser70 catalytic residue, validated against 1VM1 co-crystal"
+}
