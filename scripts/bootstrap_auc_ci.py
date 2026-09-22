@@ -7,7 +7,7 @@ point-estimate AUCs were computed).
 Method: for each target, the active's docked affinity is fixed (it's a
 single real measurement, not resampled); its N decoys' affinities are
 resampled WITH REPLACEMENT (same size N) B times, and AUC is recomputed
-against each resample -- the standard bootstrap-the-negatives approach
+against each resample and the standard bootstrap-the-negatives approach
 for a single-positive ROC statistic. The resulting distribution of B
 AUC values gives a percentile-method 95% CI per target.
 
@@ -17,7 +17,7 @@ resampled) for target j, and form the distribution of AUC_i - AUC_j.
 This is a genuine two-sample comparison (the two targets' decoy sets
 are independently generated, not paired), not a paired test.
 
-With 8 targets there are 28 pairwise comparisons -- run at nominal 95%
+With 8 targets there are 28 pairwise comparisons, run at nominal 95%
 CIs (no correction) AND flagged separately for whether they'd survive a
 Bonferroni correction for 28 simultaneous comparisons (alpha=0.05/28),
 so the multiple-comparisons risk is reported honestly rather than
