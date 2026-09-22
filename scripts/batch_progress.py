@@ -5,12 +5,12 @@ CRISPR-Cas batch scans (P. aeruginosa/S. aureus, then A. baumannii/
 E. faecium/E. cloacae).
 
 Only inspects existing files under results/crispr_scan/ and the input
-assembly directories -- never touches the running batch jobs, their
+assembly directories, never touches the running batch jobs, their
 processes, or cctyper's own output. Safe to run at any time, as many
 times as you like, alongside the live scans.
 
 Completion rate (for the ETA estimate) is derived from the mtimes of the
-summary JSONs already written -- earliest mtime approximates batch start,
+summary JSONs already written earliest mtime approximates batch start,
 most recent mtime approximates "now" for the purposes of the rate, so the
 estimate is a genome per minute rate that stays accurate over the run.
 """
