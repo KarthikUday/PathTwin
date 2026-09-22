@@ -16,10 +16,10 @@ At this scale, classification is done programmatically against CARD's own
 gene, WITH one verified correction: CARD's family alone is not sufficient
 for naturally single-copy intrinsic families (PDC beta-lactamase,
 OXA-50-like beta-lactamase, fosfomycin thiol transferase, MATE transporter,
-pmr phosphoethanolamine transferase) -- directly checked against PAO1 vs
+pmr phosphoethanolamine transferase) directly checked against PAO1 vs
 PA14's own RGI output and confirmed PA14 carries BOTH the same single
 intrinsic OXA-50-like gene PAO1 has (OXA-50) AND a second, distinct
-OXA-50-like-family gene PAO1 lacks (OXA-488) -- CARD's original Stage 6
+OXA-50-like-family gene PAO1 lacks (OXA-488) CARD's original Stage 6
 proof-of-concept called this second copy "acquired" for exactly this
 reason, not because the family itself is mobile. Generalized here as: for
 these single-copy-expected families, only genes BEYOND the first present
