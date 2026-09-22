@@ -3,29 +3,31 @@
 PathTwin — Gene-presence feature matrix builder (ML pipeline, pre-Stage 5)
 
 Runs the existing Stage 1 RGI resistance-gene profiling pipeline (see
-README's "Stage 1" section and scripts/mutation_scan.py's neighboring
-Stage-1-adjacent conventions) across a directory of genome assemblies and
+README's "Stage 1" section and the Stage 1-adjacent conventions used by
+scripts/mutation_scan.py) across a directory of genome assemblies and
 assembles a gene presence/absence feature matrix suitable for training a
 classifier (scripts/train_classifier.py).
 
-Each genome contributes a 1 for every CARD gene RGI actually detects in it
-(Best_Hit_ARO from `rgi main`'s tabular output) -- genes never detected in
-any genome in the batch simply never become a column, and a genome missing
-a gene some other genome has gets an implicit 0 for that column when the
-matrix is assembled (standard presence/absence matrix, roary-style: only
-observed columns are ever materialized, absence is implicit).
+Each genome contributes a 1 for every CARD gene that RGI actually detects
+(Best_Hit_ARO from rgi main's tabular output). Genes not detected in any
+genome in the batch do not become columns, while a genome missing a gene
+detected in another genome receives an implicit 0 when the matrix is
+assembled. This produces a standard presence/absence matrix, similar to
+roary: only observed columns are materialized, while absence is implicit.
 
-Requires the `pathtwin` conda env (rgi on PATH, CARD database already
-loaded via `rgi auto_load` -- see README's "CARD database setup").
+Requires the `pathtwin` conda environment (RGI on PATH, with the CARD
+database already loaded via `rgi auto_load`; see README's "CARD database
+setup").
 
 genome_to_features() includes a blaSHV sanity check for K. pneumoniae
 genomes: blaSHV is intrinsic to the species (present in essentially every
-K. pneumoniae genome, chromosomal, not acquired), so RGI finding none is a
-strong signal the CARD database is silently mis-loaded (see README's "CARD
-database setup" and "RGI/CARD database mis-load recurrence" sections) --
-not that the gene is genuinely absent. This is exactly the failure mode
-that produced 6 total genes across 3 genomes instead of ~36+ for one
-genome alone, caught during Stage 5 development.
+K. pneumoniae genome, chromosomal rather than acquired), so an RGI result
+with no blaSHV hit is a strong indication that the CARD database is
+mis-loaded (see README's "CARD database setup" and "RGI/CARD database
+mis-load recurrence" sections), rather than evidence that the gene is
+absent. This check was introduced after a Stage 5 development run produced
+only 6 total genes across 3 genomes, compared with ~36 genes detected in a
+single genome.
 """
 
 import argparse
