@@ -142,7 +142,7 @@ stage's script header names which environment it needs.
 **One real setup gotcha worth knowing up front**: RGI needs
 `rgi auto_load --clean`. The bare `rgi load` form has silently desynced
 RGI's database twice during this project (documented in full under
-"CARD database mis-load" in `DECISIONS_AND_LIMITATIONS.md`).
+"CARD database mis-load" in `METHODOLOGY.md`).
 
 ## Repository layout
 
@@ -156,16 +156,14 @@ results/      SHAP plots and metrics.md tracked here; the full raw output tree i
 data/         inputs (genomes, structures), not tracked in git, regenerable from public sources
 ```
 
-## Full rigor and honest limitations
+## ethodology, Validation, and Reproducibility
 
 This README states results; it doesn't reconstruct how they were
-produced. **[`DECISIONS_AND_LIMITATIONS.md`](DECISIONS_AND_LIMITATIONS.md)**
+produced. **[`METHODOLOGY.md`](METHODOLOGY.md)**
 is the complete record: every structure discrepancy caught, every tool
 limitation hit and how it was handled, every ambiguous or negative
 result, and the reasoning behind every methodological choice with a real
-tradeoff. If a number in this README surprises you, that file explains
-why. For the full chronological build narrative, see
-[`BUILD_LOG.md`](BUILD_LOG.md).
+tradeoff.
 
 ## License
 
