@@ -3,7 +3,7 @@
 PathTwin Stage 6 scale-up -- parallel batch driver for crispr_scan.py.
 
 Runs cctyper across many genome assemblies in parallel (ProcessPoolExecutor
-of individual `cctyper` subprocess calls -- each cctyper invocation is
+of individual `cctyper` subprocess calls. each cctyper invocation is
 itself lightly multi-threaded via --threads). Resumable: skips genomes that
 already have a cached summary JSON, matching crispr_scan.py's own
 already_ran cache check.
