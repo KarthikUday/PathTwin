@@ -4,35 +4,36 @@ PathTwin Stage 6 -- CRISPR-Cas phage-defense profiling
 
 Runs CRISPRCasTyper (`cctyper`) on a genome assembly and extracts:
   - whether a CRISPR-Cas system is confidently present (a Cas operon that
-    passed cctyper's own confidence thresholds -- not just a weak/candidate
-    hit)
-  - its subtype(s), specifically flagging type I-E: the literature ties
+    passes cctyper's own confidence thresholds -- not just a weak or
+    candidate hit)
+  - its subtype(s), specifically flagging type I-E: the literature links
     I-E CRISPR-Cas to an inverse correlation with ESBL/acquired-resistance
     burden in Enterobacteriaceae
-  - CRISPR array count -- both the raw count from minced and how many of
-    those cctyper actually trusts (a repeat array can exist with a
-    below-threshold subtype call, or with no confidently-linked Cas operon
+  - CRISPR array count -- both the raw count from minced and the number
+    that cctyper actually trusts (a repeat array can exist with a
+    below-threshold subtype call or with no confidently linked Cas operon
     at all: an "orphan" array)
 
 cctyper's own output schema, used directly rather than reinvented:
   - cas_operons.tab           confident Cas operon calls (only exists, and
-                               only has rows, when at least one operon
-                               passed cctyper's confidence thresholds)
+                               only contains rows, when at least one operon
+                               passes cctyper's confidence thresholds)
   - cas_operons_putative.tab  candidate operons that did NOT pass -- always
-                               written when nothing confident was found,
+                               written when no confident operon is found,
                                never treated as "presence" here
-  - crisprs_all.tab           every CRISPR array minced found, each with
-                               its own repeat-based subtype guess + whether
-                               cctyper trusts that array's stats
+  - crisprs_all.tab           every CRISPR array found by minced, each with
+                               its own repeat-based subtype guess and an
+                               indication of whether cctyper trusts that
+                               array's statistics
   - crisprs_near_cas.tab      the subset of arrays within --ccd of a
                                confident Cas operon (i.e. actually part of
                                a real CRISPR-Cas system, not orphaned)
   - CRISPR_Cas.tab            the final combined call when a confident Cas
                                operon and an array are linked
 
-Requires the `pathtwin-crispr` conda env (`cctyper` on PATH, its database
-auto-downloaded by the conda package's post-link step into
-`$CONDA_PREFIX/cct_data` -- set `CCTYPER_DB` if running from elsewhere).
+Requires the `pathtwin-crispr` conda environment (`cctyper` on PATH, with its
+database automatically downloaded by the conda package's post-link step into
+`$CONDA_PREFIX/cct_data`; set `CCTYPER_DB` if running from elsewhere).
 """
 
 import argparse
