@@ -19,15 +19,10 @@ public databases and structural biology tools a wet-lab-adjacent
 computational group would actually reach for.
 
 Every structure, accession, and literature claim used here was checked
-against its primary source before being relied on. Every result is
-reported as it actually came out, including several that came back
-weaker, null, or contradictory to what the literature predicted. When
-something was found wrong partway through (a mislabeled ligand, a
-mis-centered docking box, a database that silently went stale), it is
-documented as a correction in
-[`DECISIONS_AND_LIMITATIONS.md`](DECISIONS_AND_LIMITATIONS.md), which
-has the full account of every one of those decisions. This README
-summarizes results and points there for detail rather than repeating it.
+against its primary source. Every result is reported and compared with the literature.
+Discrepancies identified during the analysis, including errors in ligand identification, docking-box placement, or database integrity, were formally documented and incorporated into the corresponding methodological corrections.
+[`METHODOLOGY.md`](METHODOLOGY.md).
+
 
 ## The six stages
 
@@ -64,22 +59,23 @@ Overview page (see below).
   verified not to be inflated by clonal or study-batch leakage via
   grouped cross-validation.
 
-**The honest accuracy ceiling.** Pose-reproduction accuracy (above)
-answers a different question than screening accuracy does: can the
-pipeline tell a real drug from a similarly sized decoy molecule? Tested
-directly across all 8 validated docking targets using the field-standard
-active-vs-decoy AUC-ROC benchmark (DUD-E methodology), with bootstrap
-confidence intervals to separate real signal from small-sample noise:
-**only 2 of 8 targets discriminate real drug from decoys with
-statistical confidence**, one clearly (AUC 0.90) and one in the *wrong*
-direction (AUC 0.30, worse than random). The other six are statistically
-indistinguishable from chance at this sample size. One target's
-underlying docking box was subsequently found to be mis-centered by ~13
-Å and corrected; the fix improved that target's score but did not
-resolve the deeper pose-accuracy gap. This is the real, current ceiling
-on what this pipeline's docking scores can be trusted to mean.
-Full account: `DECISIONS_AND_LIMITATIONS.md`, "Docking accuracy
-validation" and "SHV-1 box correction" under Stage 2.
+**Validation of Docking-Based Screening Performance.** Pose-reproduction accuracy addresses whether the docking protocol can reproduce experimentally observed ligand poses, whereas screening accuracy evaluates whether the pipeline can distinguish active compounds from similarly sized decoy molecules. To assess this distinction, screening performance was evaluated across all eight validated docking targets using the active-vs-decoy AUC-ROC benchmark following DUD-E methodology. Bootstrap confidence intervals were calculated to quantify uncertainty associated with the sample size and to determine whether the observed discrimination differed from chance.
+
+**Active–Decoy Discrimination Performance.** Across the eight validated targets, two showed AUC values that were
+statistically distinguishable from chance based on the bootstrap confidence
+intervals. One demonstrated positive discrimination (AUC = 0.90), while the
+other showed discrimination below chance (AUC = 0.30). The remaining six
+targets were not statistically distinguishable from chance at the evaluated
+sample size. During the validation process, the docking box for one target
+was identified as being mis-centered by approximately 13 Å and was
+subsequently corrected. The corrected configuration improved the
+corresponding screening performance, but did not substantially change its
+pose-reproduction accuracy. These results provide the current empirical
+assessment of the screening performance and interpretability of the docking
+scores within this pipeline.
+
+Full details are provided in `METHODOLOGY.md` under
+"Docking accuracy validation" and "SHV-1 box correction" in Stage 2.
 
 ## Results
 
