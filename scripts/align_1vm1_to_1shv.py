@@ -3,14 +3,8 @@
 Superimpose 1VM1 (SHV-1 + tazobactam co-crystal) onto 1SHV (the apo
 receptor this project's Stage 2 docking actually uses) via chain A CA
 atoms, then apply the same rotation+translation to 1VM1's real TAZ
-(intact tazobactam) ligand coordinates -- producing a crystal reference
+(intact tazobactam) ligand coordinates producing a crystal reference
 for TAZ that is meaningful to compare against poses docked into 1SHV.
-
-Unlike every other Stage 2 target (where receptor and crystal ligand
-come from the SAME PDB entry, already in one coordinate frame), SHV-1's
-receptor (1SHV, apo) and its real tazobactam co-crystal (1VM1) are two
-independently-solved structures in two independent coordinate frames --
-this alignment step is what every other target gets for free.
 """
 from Bio.PDB import PDBParser, Superimposer
 import numpy as np
