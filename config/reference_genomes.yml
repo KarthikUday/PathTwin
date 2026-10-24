@@ -1,0 +1,114 @@
+references:
+  # Two distinct K. pneumoniae entries, deliberately -- they serve different
+  # pipeline stages, not duplicates or a stale/current pair. See README's
+  # "Stage 1: full ESKAPE pathogen coverage" for the full explanation.
+  klebsiella_pneumoniae:
+    accession: "GCF_000009885.1"
+    display_name: "K. pneumoniae NTUH-K2044"
+    # Stage 3 (scripts/mutation_scan.py): the snippy comparison reference
+    # genome for variant calling against query assemblies. Established
+    # reference strain for K. pneumoniae virulence/capsule research, not
+    # the species type strain.
+  klebsiella_pneumoniae_stage1:
+    accession: "GCF_006364295.1"
+    display_name: "K. pneumoniae ATCC 13883 (species type strain)"
+    # Stage 1 (RGI): the genome all Stage 1 K. pneumoniae RGI results
+    # (SHV-1, 36 hits) have been run and reported against throughout this
+    # project. Genuine nomenclature type strain, matching the "reference/
+    # type strain" criterion used for the other five ESKAPE species below.
+  staphylococcus_aureus:
+    accession: "GCF_000013425.1"
+    display_name: "S. aureus subsp. aureus NCTC 8325"
+    # Clean type-strain baseline. Diversity strains below add clinically
+    # representative MRSA lineages -- see README "Stage 1 diversity strains".
+  staphylococcus_aureus_usa300:
+    accession: "GCF_000013465.1"
+    display_name: "S. aureus USA300_FPR3757 (dominant CA-MRSA clone)"
+    # RGI-confirmed mecA (Strict). 23 hits total.
+  staphylococcus_aureus_mrsa252:
+    accession: "GCF_000011505.1"
+    display_name: "S. aureus MRSA252 (dominant HA-MRSA clone)"
+    # RGI-confirmed mecA + mecR1 + mecA-type mecI (full mec regulatory
+    # cassette). 28 hits total.
+  acinetobacter_baumannii:
+    accession: "GCF_009035845.1"
+    display_name: "A. baumannii ATCC 19606"
+    # Clean type-strain baseline. Diversity strains below add clinically
+    # representative MDR lineages -- see README "Stage 1 diversity strains".
+  acinetobacter_baumannii_acicu:
+    accession: "GCF_000018445.1"
+    display_name: "A. baumannii ACICU (MDR clinical isolate)"
+    # NOTE: the accession originally proposed for ACICU (GCF_000069245.1)
+    # is actually AYE (verified against NCBI) -- the two were swapped.
+    # This is the correct, verified ACICU accession. RGI-confirmed OXA-66
+    # (Perfect) -- this is the intrinsic OXA-51-like chromosomal
+    # carbapenemase family (species-defining, same family as the type
+    # strain's OXA-98, not a horizontally acquired gene); ACICU's
+    # genuinely acquired MDR signature is its class 1 integron cassette
+    # (sul1/qacEdelta1) plus aminoglycoside-modifying enzymes
+    # (ANT(3'')-IIa, AAC(6')-Ib10). 29 hits total.
+  acinetobacter_baumannii_aye:
+    accession: "GCF_000069245.1"
+    display_name: "A. baumannii AYE (pan-drug resistant, large resistance island)"
+    # NOTE: this is the accession originally proposed for "ACICU" --
+    # verified against NCBI to actually be AYE. RGI confirms the "large
+    # resistance island" framing: 49 hits (vs ACICU's 29), including a
+    # rich acquired cassette (aadA, AAC(3)-Ia, APH(3')-Ia, ANT(2'')-Ia,
+    # AAC(6')-Ian, APH(6)-Id, APH(3'')-Ib, ANT(3'')-IIa, catA1, cmlA5,
+    # cmlA9, tet(A), dfrA1, dfrA10, arr-2, OXA-10, VEB-1) consistent with
+    # the published AbaR1 resistance island. OXA-69 (intrinsic
+    # OXA-51-like family, same caveat as ACICU's OXA-66) also present.
+  pseudomonas_aeruginosa:
+    accession: "GCF_000006765.1"
+    display_name: "P. aeruginosa PAO1"
+    # Clean type-strain baseline. Diversity strain below adds a
+    # clinically representative hypervirulent lineage -- see README
+    # "Stage 1 diversity strains".
+  pseudomonas_aeruginosa_pa14:
+    accession: "GCF_000014625.1"
+    display_name: "P. aeruginosa UCBPP-PA14 (highly virulent clinical reference strain)"
+    # RGI: 58 hits, richest of any diversity strain in this batch --
+    # intrinsic PDC-34 (AmpC allele) + full Mex efflux arsenal, plus an
+    # acquired OXA-488 (Perfect) not present in PAO1.
+  enterococcus_faecium:
+    accession: "GCF_029023785.1"
+    display_name: "E. faecium DSM 20477 (= ATCC 19434, species type strain)"
+    # Clean type-strain baseline. Diversity strain below is a
+    # historically important hospital-associated reference strain --
+    # see README "Stage 1 diversity strains" for the vanA verification
+    # finding (RGI did NOT confirm a vanA cluster in this strain).
+  enterococcus_faecium_do:
+    accession: "GCF_000174395.2"
+    display_name: "E. faecium DO / TX16 (hospital-associated clade reference strain, ST18)"
+    # NOTE: the accession originally proposed (GCF_000172575.2) is
+    # Enterococcus FAECALIS OG1RF, a different species entirely -- this
+    # is the correct, verified E. faecium DO accession. Genuinely
+    # hospital-associated (confirmed via the strain's own genome paper,
+    # Qin et al. 2012 BMC Microbiol, PMID 22769602) but RGI did NOT
+    # detect a vanA cluster as the task premise assumed -- only a single
+    # Strict-cutoff vanB-cluster gene (vanY), no vanA/vanB/vanA-associated
+    # ligase. 12 hits total. Flagged honestly rather than silently
+    # reported as a match; see README for the full account.
+  enterobacter_cloacae:
+    accession: "GCF_000025565.1"
+    display_name: "E. cloacae subsp. cloacae ATCC 13047 (species type strain)"
+    # Clean type-strain baseline. Diversity strain below is a substitute
+    # for the originally-proposed EcWSU1, which does not exist as given
+    # and, even under its real accession, turned out to be a
+    # taxonomically-reclassified (E. ludwigii) plant pathogen, not a
+    # clinical MDR E. cloacae isolate -- see README "Stage 1 diversity
+    # strains" for the full search and substitution account.
+  enterobacter_cloacae_9553:
+    accession: "GCF_058409265.1"
+    display_name: "E. cloacae strain 9553 (clinical sputum isolate, NHRI Taiwan)"
+    # Substitute for the originally-proposed EcWSU1 (see above). Genuinely
+    # clinical (host: Homo sapiens, sputum specimen, BioProject
+    # PRJNA1477309) and genuinely species-correct E. cloacae under
+    # current NCBI taxonomy, Complete Genome (2 contigs). RGI did NOT
+    # detect an acquired carbapenemase as the task premise assumed for
+    # this species' diversity strain -- notable beta-lactamase hits are
+    # DHA-1 (Perfect, an acquired plasmid-mediated AmpC, not a
+    # carbapenemase) and CMH-20 (Perfect, the intrinsic chromosomal AmpC
+    # family, same family as the type strain's CMH-4), plus acquired
+    # QnrB4 (fluoroquinolone). 42 hits total. Flagged honestly; see
+    # README for the full account.

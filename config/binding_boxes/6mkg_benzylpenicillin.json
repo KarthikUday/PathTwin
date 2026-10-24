@@ -1,0 +1,13 @@
+{
+  "receptor": "6MKG",
+  "ligand": "benzylpenicillin",
+  "center_x": 10.604,
+  "center_y": -86.191,
+  "center_z": -47.725,
+  "size_x": 20,
+  "size_y": 20,
+  "size_z": 20,
+  "exhaustiveness": 32,
+  "random_seed": 42,
+  "note": "Centered on Ser422's OG (catalytic nucleophile). Confirmed via both a SITE record (AC1, 10 atoms including Ser422, Val465, Ser480, Asn482, Thr618/Gly619/Thr620, Glu622, Glu633, Asp659) and a genuine covalent LINK record (Ser422 OG to PNM C7, 1.40 A) -- matches the literature-stated residue number, independently verified against this specific file rather than assumed. The deposited ligand (PNM, HETNAM 'OPEN FORM - PENICILLIN G') is confirmed via RCSB's chemical component dictionary to be the ring-opened acyl-enzyme adduct of benzylpenicillin (C16H20N2O4S) rather than the intact bicyclic drug (C16H18N2O4S, PubChem CID 5904) -- expected for a covalent acyl-enzyme complex, same +2H ring-opening pattern seen at OXA-23 (MER) and PDC-1/AmpC (NXL). A fresh intact benzylpenicillin was independently fetched from PubChem and docked non-covalently."
+}

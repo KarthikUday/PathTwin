@@ -1,0 +1,13 @@
+{
+  "receptor": "1BLS",
+  "ligand": "cephalothin",
+  "center_x": 22.472,
+  "center_y": 54.511,
+  "center_z": 23.015,
+  "size_x": 20,
+  "size_y": 20,
+  "size_z": 20,
+  "exhaustiveness": 32,
+  "random_seed": 42,
+  "note": "Centered on Ser64's OG (catalytic nucleophile). Confirmed via both a SITE record (AC1, 9 atoms: Ser64, Gln120, Tyr150, Asn152, Tyr221, Gly317, Ser318, Gly320) and a genuine covalent LINK record (Ser64 OG to IPP P, 1.64 A -- a real P-O covalent bond) in chain A; the same residue is independently confirmed via chain B's own SITE (AC2) and LINK records. This receptor is PDB 1BLS, Enterobacter cloacae strain P99's chromosomal AmpC cephalosporinase -- used here as CMH-4's best-characterized structural relative within the same AmpC gene family, since CMH-4 itself (the allele actually detected in Stage 1's E. cloacae ATCC 13047 RGI results) has no solved PDB structure. Same honest-limitation pattern as the SHV allele handling for K. pneumoniae. The bound crystal ligand (IPP, a phosphonate transition-state analog) is not a real drug -- cephalothin was independently fetched from PubChem and docked as the clinically relevant substrate this enzyme class is named for hydrolyzing. Because IPP is a small mechanistic mimic rather than a full-sized cephalosporin, expect a larger centroid-to-centroid offset from the real ligand than at other targets even with a tight Ser64-proximity match -- see README 'P99/AmpC vs cephalothin' for the full reasoning."
+}
