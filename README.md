@@ -247,12 +247,7 @@ p99_cephalothin         cephalothin         30   0.333    [0.167, 0.533]    over
 | 7 | `prep_crispr_assemblies.py`, `batch_crispr_scan.py`, `analyze_crispr_amr_correlation.py` | `results/crispr_scan/*_crispr_amr_stats.json` |
 | 7 (dominant-ST exclusion) | `crispr_clone_sensitivity.py` | `results/crispr_scan/abaumannii_clone_sensitivity.json` |
 
-## 8. Citation
 
-If you use this repository, please cite it using the "Cite this repository" entry on GitHub (generated from [`CITATION.cff`](CITATION.cff)), or as:
-
-> Uday, K. (2026). *PathTwin: a computational pipeline for antimicrobial resistance profiling in ESKAPE pathogens* [Computer software]. https://github.com/KarthikUday/PathTwin
-
-## 9. License
+## 8. License
 
 MIT. See [`LICENSE`](LICENSE).
